@@ -1,0 +1,12 @@
+<section class="post-list">
+    {% for post in posts %}
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="{{ post.id }}/">{{ post.title }}</a>
+        </h2>
+        <p class="post-excerpt">{{ post.content|truncatewords:30 }}</p>
+        <a class="read-more" href="{{ post.id }}/">Read more</a>
+      </article>
+    {% endfor %}
+  </section>
+  
